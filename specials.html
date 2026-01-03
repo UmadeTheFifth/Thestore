@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers - theStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>FREE SHIPPING ON ALL U.S ORDERS OVER $50</div>
+            <div class="top-bar-right">
+                <select>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <select>
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+                <span>My Account</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">the<span>Store</span></a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="handleProfileClick()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="window.location.href='checkout.html'">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div class="mobile-dropdown" id="mobileDropdown">
+                <a href="contact.html">Contact</a>
+                <a href="history.html">History</a>
+                <a href="specials.html">Specials</a>
+                <a href="#" onclick="logout()">Log Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Specials Content -->
+    <div class="specials-content">
+        <div class="section-header">
+            <h2>Special Offers</h2>
+            <p>Limited time deals you don't want to miss</p>
+        </div>
+
+        <div class="specials-grid">
+            <div class="special-card">
+                <div class="special-image">🎁</div>
+                <div class="special-content">
+                    <span class="special-badge">30% OFF</span>
+                    <h3 class="special-title">Summer Collection Bundle</h3>
+                    <p class="special-description">Get 3 polo shirts for the price of 2. Perfect for the warm season
+                        ahead!</p>
+                    <div class="special-price">
+                        $94.50
+                        <span class="special-old-price">$135.00</span>
+                    </div>
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <div class="special-image">⌚</div>
+                <div class="special-content">
+                    <span class="special-badge">FLASH SALE</span>
+                    <h3 class="special-title">Luxury Watch Deal</h3>
+                    <p class="special-description">Premium Swiss movement watch at an unbeatable price. Limited stock
+                        available!</p>
+                    <div class="special-price">
+                        $199.00
+                        <span class="special-old-price">$299.00</span>
+                    </div>
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <div class="special-image">🕶️</div>
+                <div class="special-content">
+                    <span class="special-badge">BUY 1 GET 1</span>
+                    <h3 class="special-title">Designer Sunglasses</h3>
+                    <p class="special-description">Buy one pair of sunglasses and get another pair at 50% off. Mix and
+                        match styles!</p>
+                    <div class="special-price">
+                        $193.50
+                        <span class="special-old-price">$258.00</span>
+                    </div>
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <div class="special-image">👖</div>
+                <div class="special-content">
+                    <span class="special-badge">CLEARANCE</span>
+                    <h3 class="special-title">Premium Denim Sale</h3>
+                    <p class="special-description">Last season's premium denim at incredible prices. All sizes still
+                        available!</p>
+                    <div class="special-price">
+                        $59.00
+                        <span class="special-old-price">$89.00</span>
+                    </div>
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <div class="special-image">📦</div>
+                <div class="special-content">
+                    <span class="special-badge">FREE GIFT</span>
+                    <h3 class="special-title">Essentials Starter Pack</h3>
+                    <p class="special-description">Complete outfit bundle with free premium gift wrapping and express
+                        shipping!</p>
+                    <div class="special-price">
+                        $249.00
+                        <span class="special-old-price">$320.00</span>
+                    </div>
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <div class="special-image">⭐</div>
+                <div class="special-content">
+                    <span class="special-badge">VIP EXCLUSIVE</span>
+                    <h3 class="special-title">Member's Only Deal</h3>
+                    <p class="special-description">Exclusive early access to our new collection with 25% off for loyalty
+                        members.</p>
+                    <div class="special-price">
+                        $149.25
+                        <span class="special-old-price">$199.00</span>
+                    </div>
+                    <button class="add-to-cart-btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>theStore</h3>
+                <p style="color: #999; line-height: 1.8;">Your destination for minimalist, high-quality fashion and
+                    accessories.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="shop.html">Polos</a></li>
+                    <li><a href="shop.html">Pants</a></li>
+                    <li><a href="shop.html">Watches</a></li>
+                    <li><a href="shop.html">Glasses</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 theStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

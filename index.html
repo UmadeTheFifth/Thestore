@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theStore - Modern Ecommerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>FREE SHIPPING ON ALL U.S ORDERS OVER $50</div>
+            <div class="top-bar-right">
+                <select>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <select>
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+                <span>My Account</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">the<span>Store</span></a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="handleProfileClick()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="window.location.href='checkout.html'">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div class="mobile-dropdown" id="mobileDropdown">
+                <a href="contact.html">Contact</a>
+                <a href="history.html">History</a>
+                <a href="specials.html">Specials</a>
+                <a href="#" onclick="logout()">Log Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">SPRING / SUMMER COLLECTION 2025</div>
+            <h1>Get up to 30% Off<br>New Arrivals</h1>
+            <p class="hero-subtitle">Discover the latest trends in fashion</p>
+            <button class="hero-btn" onclick="window.location.href='shop.html'">SHOP NOW</button>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="category-card" onclick="window.location.href='category.html?category=polos'">
+            <div
+                style="background: #ffd89b; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?w=800&q=80'); background-size: cover; background-position: center;">
+            </div>
+            <div class="category-overlay">
+                <h3>POLOS</h3>
+            </div>
+        </div>
+        <div class="category-card" onclick="window.location.href='category.html?category=pants'">
+            <div
+                style="background: #a8e6cf; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://lh4.googleusercontent.com/proxy/m2geRqGGvH5m_cagsvhaNZdqwy6Qcv6Jje4N52ujAr-z1vpxTSSbW151lf7T8oKu6MpSy1ql63Fnp-3NTNcseopme0z2uHiMs5VnpXUWHnAjJbWlqEjk4kxbZ9P2OQZTSxYft-Ks'); background-size: cover; background-position: center;">
+            </div>
+            <div class="category-overlay">
+                <h3>PANTS</h3>
+            </div>
+        </div>
+        <div class="category-card" onclick="window.location.href='category.html?category=watches'">
+            <div
+                style="background: #a8d8ea; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80'); background-size: cover; background-position: center;">
+            </div>
+            <div class="category-overlay">
+                <h3>WATCHES</h3>
+            </div>
+        </div>
+        <div class="category-card" onclick="window.location.href='category.html?category=glasses'">
+            <div
+                style="background: #ffb3ba; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800&q=80'); background-size: cover; background-position: center;">
+            </div>
+            <div class="category-overlay">
+                <h3>GLASSES</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section">
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <p>Shop our most popular items</p>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Sales Completed Counter Section -->
+    <section class="countdown-section">
+        <h2>SUCCESSFUL ORDERS TODAY!</h2>
+        <p>Join thousands of happy customers</p>
+        <div class="countdown-timer">
+            <div class="countdown-box">
+                <span class="countdown-number" id="salesCounter">1,247</span>
+                <span class="countdown-label">Completed Orders</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>theStore</h3>
+                <p style="color: #999; line-height: 1.8;">Your destination for minimalist, high-quality fashion and
+                    accessories.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="category.html?category=polos">Polos</a></li>
+                    <li><a href="category.html?category=pants">Pants</a></li>
+                    <li><a href="category.html?category=watches">Watches</a></li>
+                    <li><a href="category.html?category=glasses">Glasses</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 theStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

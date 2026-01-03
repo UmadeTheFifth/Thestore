@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - theStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>FREE SHIPPING ON ALL U.S ORDERS OVER $50</div>
+            <div class="top-bar-right">
+                <select>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <select>
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+                <span>My Account</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">the<span>Store</span></a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="icon-btn mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="handleProfileClick()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </button>
+                <button class="icon-btn" onclick="window.location.href='checkout.html'">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div class="mobile-dropdown" id="mobileDropdown">
+                <a href="contact.html">Contact</a>
+                <a href="history.html">History</a>
+                <a href="specials.html">Specials</a>
+                <a href="#" onclick="logout()">Log Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Testimonials Content -->
+    <div class="testimonials-page">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Real reviews from real customers</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Absolutely love the quality and style of the products! Fast shipping and
+                    excellent customer service. Will definitely be ordering again."</p>
+                <div class="testimonial-author">Sarah Johnson</div>
+                <div class="testimonial-role">Fashion Enthusiast</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"theStore has become my go-to for all my fashion needs. The minimalist
+                    aesthetic is exactly what I was looking for. Highly recommend!"</p>
+                <div class="testimonial-author">Michael Chen</div>
+                <div class="testimonial-role">Designer</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Great prices, amazing quality, and the website is so easy to navigate. I've
+                    already recommended theStore to all my friends!"</p>
+                <div class="testimonial-author">Emily Rodriguez</div>
+                <div class="testimonial-role">Verified Buyer</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The attention to detail in every product is remarkable. Plus, the packaging
+                    is beautiful. Makes shopping feel special every time."</p>
+                <div class="testimonial-author">David Kim</div>
+                <div class="testimonial-role">Style Blogger</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I was skeptical about ordering online, but theStore exceeded all my
+                    expectations. The quality is outstanding and fits perfectly!"</p>
+                <div class="testimonial-author">Jessica Williams</div>
+                <div class="testimonial-role">First-time Customer</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Customer service is top-notch! They helped me find the perfect gift and
+                    even offered free gift wrapping. Very impressed!"</p>
+                <div class="testimonial-author">Robert Taylor</div>
+                <div class="testimonial-role">Loyal Customer</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>theStore</h3>
+                <p style="color: #999; line-height: 1.8;">Your destination for minimalist, high-quality fashion and
+                    accessories.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="shop.html">Polos</a></li>
+                    <li><a href="shop.html">Pants</a></li>
+                    <li><a href="shop.html">Watches</a></li>
+                    <li><a href="shop.html">Glasses</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 theStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
